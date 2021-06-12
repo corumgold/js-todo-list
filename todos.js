@@ -12,7 +12,8 @@ let input = prompt("What would you like me to do?")
         }
     } else if (input == 'delete') {
         let itemToDelete = prompt('What would you like to delete?');
-
+    } else {
+        let input = prompt('Please enter a valid command.')
     }
 // }
 
