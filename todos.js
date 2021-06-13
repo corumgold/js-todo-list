@@ -17,11 +17,15 @@ while (input !== 'quit' && input !== 'q') {
         const item = prompt('What would you like to add?');
         todos.push(item);
         console.log(`You have added ${item} to your list`)
-    } 
-    else if (input === 'delete'){
-        const index = prompt('What is the index (number) of the item to delete?');
-        const deleted = todos.splice(index, 1);
-        console.log(`OK! Deleted ${deleted[0]} successfully!`)
+    }
+    else if (input === 'delete') {
+        const index = parseInt(prompt('What is the index (number) of the item to delete?'));
+        if (!Number.isNaN(index)) {
+            const deleted = todos.splice(index, 1);
+            console.log(`OK! Deleted ${deleted[0]} successfully!`)
+        } else {
+            console.log('Invalid Index')
+        }
     }
 
     input = prompt('What would you like me to do?')
