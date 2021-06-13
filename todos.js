@@ -1,4 +1,4 @@
-const todos = ['fart', 'farting', 'fartiest'];
+const todos = [];
 let input = prompt("What would you like me to do?");
 
 while (input !== 'quit' && input !== 'q') {
